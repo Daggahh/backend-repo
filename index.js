@@ -29,7 +29,11 @@ const corsOptions = {
 };
 
 // Lets the app handle requests from the frontend (even if the frontend is on a different website).
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 // Lets the app understand and handle data sent in JSON format.
 app.use(express.json());
